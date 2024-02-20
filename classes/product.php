@@ -23,7 +23,13 @@ class product
     {
         $this->name = $name;
         $this->image = $image;
-        $this->price = $price;
+        if (is_numeric($price)) {
+            $this->price = $price;
+        }
+        else {
+
+            throw new Exception('Il valore del prezzo va inserito in numeri non in lettere');
+        }
         $this->category = $category;
         $this->stock = $stock;
         $this->descriptions = $descriptions;
