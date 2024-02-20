@@ -1,8 +1,10 @@
 <?php
 require_once __DIR__ . './product.php';
+require_once './traits/partnership.php';
 
 class toys extends product
-{
+{   
+    use partnership;
     public $materialtoys;
     public $isoutdoor;
 

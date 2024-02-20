@@ -1,8 +1,10 @@
 <?php
 require_once __DIR__ . './product.php';
+require_once './traits/partnership.php';
 
 class food extends product
-{
+{   
+    use partnership;
     public $expire;
     public $flavour;
     public $kg;

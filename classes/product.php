@@ -1,7 +1,8 @@
 <?php
-
+require_once './traits/partnership.php';
 class product
-{
+{   
+    use partnership;
     public $name;
     public $image;
     public $price;
@@ -14,7 +15,7 @@ class product
     function __construct(
         string $name,
         string $image,
-        int $price,
+        $price,
         string $category,
         int $stock,
         string $descriptions = 'not found',
